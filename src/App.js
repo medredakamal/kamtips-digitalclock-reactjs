@@ -45,11 +45,49 @@ const App = () => {
   useEffect(() => setTimeout(() => updateTime(), 1000)), [seconds];
 
   return (
-    <div style={clockStyle}>
-      {hours && minutes && seconds
-        ? `${hours}:${minutes}:${seconds} ${timeconvention}`
-        : 'Loading...'}
-    </div>
+    <>
+      <div style={clockStyle}>
+        {hours && minutes && seconds
+          ? `${hours}:${minutes}:${seconds} ${timeconvention}`
+          : 'Loading...'}
+      </div>
+      <div class="medredakamal__author__card">
+        <div class="card__left__side">
+          <img
+            class="medredakamal__image"
+            src="https://medredakamal.dev/mk-profile.png"
+            alt="Med Reda Kamal"
+          />
+          <div class="card__author__infos">
+            <h1>Med Reda Kamal</h1>
+            <p>Senior Web Developer, creator of KamCode</p>
+            <a
+              class="linkedin_link"
+              href="https://linkedin.com/in/medredakamal"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>Follow me on LinkedIn
+            </a>
+            <a
+              class="portfolio_link"
+              href="https://medredakamal.dev"
+              target="_blank"
+            >
+              <i class="fas fa-globe"></i>My Portfolio
+            </a>
+          </div>
+        </div>
+        <div class="card__right__side">
+          <a href="https://www.linkedin.com/company/80979320" target="_blank">
+            <img
+              class="kamcode__image"
+              src="https://medredakamal.dev/kamcode-logo.png"
+              alt="KamCode Logo"
+            />
+          </a>
+        </div>
+      </div>
+    </>
   );
 };
 
